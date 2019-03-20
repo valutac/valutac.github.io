@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valutac Open Source</title>
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <!-- Favicons for Desktop, iOS and android -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://valutac.com/assets/img/favicons/apple-touch-icon.png?v2=47MOAEWy68">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://valutac.com/assets/img/favicons/favicon-32x32.png?v2=47MOAEWy68">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://valutac.com/assets/img/favicons/favicon-16x16.png?v2=47MOAEWy68">
+    <link rel="manifest" href="https://valutac.com/assets/img/favicons/manifest.json?v2=47MOAEWy68">
+    <link rel="mask-icon" href="https://valutac.com/assets/img/favicons/safari-pinned-tab.svg?v2=47MOAEWy68" color="#5bbad5">
+    <link rel="shortcut icon" href="https://valutac.com/assets/img/favicons/favicon.ico?v2=47MOAEWy68">
+    <meta name="apple-mobile-web-app-title" content="Valutac">
+    <meta name="application-name" content="Valutac">
+    <meta name="msapplication-config" content="https://valutac.com/assets/img/favicons/browserconfig.xml?v2=47MOAEWy68">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="/">
+</head>
+<body>
+    <div id="app">
+        <section class="hero is-dark">
+            <div class="hero-body has-margin-top-md has-margin-bottom-md">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column is-6">
+                            <h1 class="title is-1 is-spaced">
+                                Valutac Open Source
+                            </h1>
+                            <p class="subtitle">As a company rely on open source, here are some of the internally-developed libraries or tools that we are using for our projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="content is-large">
+                    <div class="columns is-multiline is-mobile is-centered">
+                        <div class="column is-one-quarter" v-for="item in featured">
+                            <div class="card">
+                                <div class="card-content" style="min-height: 146px;">
+                                    <p class="title">
+                                        {{item.title}}
+                                    </p>
+                                    <p class="subtitle">
+                                        {{item.description}}
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <p class="card-footer-item">
+                                        <span>
+                                            View on <a v-bind:href="item.github">Github</a>
+                                        </span>
+                                    </p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
